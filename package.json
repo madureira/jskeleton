@@ -1,0 +1,30 @@
+{
+  "name"              : "jskeleton",
+  "version"           : "0.0.1",
+  "description"       : "A simple js skeleton for build complex javascript-based applications.",
+  "keywords"          : ["jskeleton", "javascript", "nodejs", "coffeescript", "less"],
+  "homepage"          : "https://github.com/madureira/jskeleton",
+
+  "author"            : "Rafael Madureira dos Santos",
+
+  "bugs"              : { "url": "https://github.com/madureira/jskeleton/issues" },
+  "license"           : "BSD",
+  "repository"        : { "type": "git", "url": "https://github.com/madureira/jskeleton.git" },
+
+  "main"              : "index.html",
+
+  "dependencies"      : {
+    "connect"         : "~2.7.4",
+    "mincer"          : "~0.4.5",
+    "uglify-js"       : "~1.3.4",
+    "csso"            : "~1.3.7",
+    "less"            : "~1.3.3"
+  },
+
+  "devDependencies"   : {
+    "jasmine-node"    : "~1.5.0",
+    "coffee-script"   : "~1.6.2"
+  },
+
+  "engines"         : { "node": ">= 0.10.3" }
+}
