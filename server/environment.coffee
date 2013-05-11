@@ -15,12 +15,10 @@ environment.appendPath "../src/stylesheets/"
 Define environment essential *_path helper that will be available in the
 processed assets.
 ###
-
 environment.ContextClass.defineAssetPath (pathname, options) ->
   asset = @environment.findAsset(pathname, options)
   throw new Error("File " + pathname + " not found")  unless asset
   "/public/" + asset.digestPath
-
 
 ###
 Aditional configuration to production environment.
