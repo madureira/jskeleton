@@ -43,9 +43,9 @@ module.exports = function(grunt) {
                     'src/javascript/bin/templates.js': 'src/javascript/main/templates/*.tmpl'
                 },
                 options: {
-                    namespace: 'Templates',
+                    namespace: 'Handlebars',
                     processName: function(filePath) {
-                        return filePath.replace(/^js\/tmpl\//, '');
+                        return filePath.replace(/^src\/javascript\/main\/templates\//, '');
                     }
                 }
             }

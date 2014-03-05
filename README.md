@@ -39,16 +39,15 @@ You need download dependencies, go to your project directory, in other words, wh
 
     $ npm install
 
-You have to install Grunt on global mode execute this (In some cases is necessary to execute with "sudo"):
+You have to install Grunt on global mode execute this (in some cases is necessary to execute it with "sudo"):
 
     $ npm install -g grunt-cli
 
-To generate the compressed files, you must to open a new tab in your terminal and execute this:
+To generate the compressed files, you must to open a new tab in your terminal, (this tab should be kept open, or if you prefer execute the command background mode) and execute this:
 
     $ grunt
 
 Now, always that you save any modified file, Grunt will execute tasks to generate a compressed file.
-This tab should be kept open, or if you prefer execute this command in backgrount.
 
 Finally, start the server:
 

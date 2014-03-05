@@ -17,4 +17,4 @@ App.current.config = {
         return url;
     }
 
-}
+};
