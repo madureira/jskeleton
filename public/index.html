@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>jskeleton - hello world!</title>
-    <link type="text/css" rel="stylesheet" media="all" href="/public/index.css">
-  </head>
-  <body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>jskeleton - hello world!</title>
+        <link type="text/css" rel="stylesheet" media="all" href="/bin/app.css">
+    </head>
+    <body>
+        <h1 id="hello"></h1>
 
-    <img src="/public/images/icon_nodejs.jpg" alt="nodejs icon" />
-
-    <h1 id="hello"></h1>
-
-    <script src="/public/index.js"></script>
-
-    <script type="text/javascript" charset="utf-8">
-      jQuery(document).ready(function() {
-        var hello = new App.Views.HelloWorldView();
-        $('#hello').text(hello.getMessage());
-        console.log('Runnig...');
-      });
-    </script>
-
-  </body>
+        <script src="/bin/app.js"></script>
+    </body>
 </html>

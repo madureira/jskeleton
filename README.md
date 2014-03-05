@@ -6,9 +6,8 @@ This is a simple js skeleton for build complex javascript-based applications.
 
 jskeleton can:
 
-1. Run coffeescript applications
+1. Run javscript/coffeescript applications
 1. Run BDD tests using jasmine
-1. Serve web assets
 1. Build Server in nodejs
 
 ## How?
@@ -41,13 +40,13 @@ You need download dependencies, go to your project directory, in other words, wh
 
     $ npm install
 
+You have to install Grunt on global mode:
+
+    $ npm install -g grunt-cli
+
 Finally, start the server:
 
-    $ ./run_server.sh
-
-To start the server in production mode, execute with parameter "--production":
-
-    $ ./run_server.sh --production
+    $ node server.js
 
 
-Access http://localhost:3000/public/index.html and enjoy yourself!
+Access http://localhost:3000 and enjoy yourself!
