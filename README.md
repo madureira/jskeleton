@@ -20,13 +20,12 @@ First of all, download and install nodejs:
 
 Then copy it to your environment's directory (the environment directory is a place where you generally keeps development tools):
 
-    $ cp node-v0.10.3-xxxxx /home/user/environment/nodejs
+    $ cp node-v0.10.3-xxxxx /home/user/environment/nodejs -R
 
 Now, you have to create the environment variables, edit the file /home/user/.profile or /home/user/.bashrc and add it:
 
     # Nodejs configuration
-    export NODE_PATH=/home/user/environment_directory/nodejs
-
+    export NODE_PATH=/home/user/environment/nodejs
     alias node=$NODE_PATH'/bin/node'
     alias npm=$NODE_PATH'/bin/npm'
 
@@ -40,9 +39,16 @@ You need download dependencies, go to your project directory, in other words, wh
 
     $ npm install
 
-You have to install Grunt on global mode:
+You have to install Grunt on global mode execute this (In some cases is necessary to execute with "sudo"):
 
     $ npm install -g grunt-cli
+
+To generate the compressed files, you must to open a new tab in your terminal and execute this:
+
+    $ grunt
+
+Now, always that you save any modified file, Grunt will execute tasks to generate a compressed file.
+This tab should be kept open, or if you prefer execute this command in backgrount.
 
 Finally, start the server:
 
