@@ -1,6 +1,11 @@
-helloWorld = new App.views.helloWorld();
-
+/**
+ * Tests to App.views.helloWorld
+ *
+ * @author Madureira
+ */
 describe('helloWorld', function () {
+
+    var helloWorld = new App.views.helloWorld();
 
     it('should say hello', function () {
         expect(helloWorld.sayHello()).toEqual(jasmine.any(String));

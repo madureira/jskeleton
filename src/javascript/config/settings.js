@@ -5,13 +5,10 @@ App.current.config = {
     port: '3000',
 
     getServiceUrl: function() {
-        var domain = this.serviceDomain;
-        var port = this.port;
+        var url = this.serviceDomain;
 
-        var url = '';
-
-        if (port != '') {
-            url = domain + ':' + port;
+        if (this.port !== undefined && this.port.trim() !== '') {
+            url += ':' + this.port;
         }
 
         return url;

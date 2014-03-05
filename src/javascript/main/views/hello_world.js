@@ -15,14 +15,10 @@ App.views.helloWorld = (function($, hbs, undefined) {
     }
 
     App.views.helloWorld.prototype.sayHello = function() {
-        return message();
-    }
-
-    // Private methods
-    function message() {
         return template({ message:'Hello World!!!' });
     }
 
+    // Private method
     function template(data) {
         var tmpl = hbs['hello_world.tmpl'];
         return tmpl(data);
