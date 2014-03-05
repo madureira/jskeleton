@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         watch: {
             files: [
                 'src/javascript/**/*.js', 
+                '!src/javascript/bin/**/*.js', 
                 'src/javascript/**/*.tmpl', 
                 'src/stylesheet/**/*.css', 
                 'src/stylesheet/**/*.less'
@@ -29,6 +30,13 @@ module.exports = function(grunt) {
                 'src/javascript/main/views/*.js',
 
                 'src/javascript/main/start.js'
+            ],
+            'public/bin/specs.js': [
+                'src/javascript/test/lib/jasmine/jasmine.js',
+                'src/javascript/test/lib/jasmine/jasmine-html.js',
+                'src/javascript/test/lib/jasmine/console.js',
+                'src/javascript/test/lib/jasmine/boot.js',
+                'src/javascript/test/specs/**/*.js'
             ]
         },
 
@@ -58,7 +66,13 @@ module.exports = function(grunt) {
                     compress: false
                 },
                 files: {
-                    'public/bin/app.css': [ 'src/stylesheet/lib/*.css', 'src/stylesheet/main/**/*.less']
+                    'public/bin/app.css': [
+                        'src/stylesheet/lib/*.css',
+                        'src/stylesheet/main/**/*.less'
+                    ],
+                    'public/bin/specs.css': [
+                        'src/javascript/test/lib/jasmine/jasmine.css'
+                    ]
                 }
             }
         }
