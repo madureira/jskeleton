@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         watch: {
             files: [
                 'src/javascript/**/*.js', 
-                '!src/javascript/bin/**/*.js', 
+                '!src/javascript/bin/**/*.js',
                 'src/javascript/**/*.tmpl', 
                 'src/stylesheet/**/*.css', 
                 'src/stylesheet/**/*.less'

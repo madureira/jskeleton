@@ -29,21 +29,21 @@ Now, you have to create the environment variables, edit the file /home/user/.pro
     alias node=$NODE_PATH'/bin/node'
     alias npm=$NODE_PATH'/bin/npm'
 
-Save and close file, now execute:
+Save, close file and then execute:
 
     $ source /home/user/.profile
     or
     $ source /home/user/.bashrc
 
-You need download dependencies, go to your project directory, in other words, where you download it (for example: /home/user/workspace/jskeleton) and execute this:
+You need to download dependencies, go to your project directory, in other words, where you download it (for example: /home/user/workspace/jskeleton) and execute this:
 
     $ npm install
 
-You have to install Grunt on global mode execute this (in some cases is necessary to execute it with "sudo"):
+You have to install Grunt on global mode (in some cases is necessary to execute it with "sudo"):
 
     $ npm install -g grunt-cli
 
-To generate the compressed files, you must to open a new tab in your terminal, (this tab should be kept open, or if you prefer execute the command background mode) and execute this:
+To generate the compressed files, you must to open a new tab in your terminal, (this tab should be kept open, or if you prefer execute the command in background mode) and execute:
 
     $ grunt
 
@@ -54,4 +54,9 @@ Finally, start the server:
     $ node server.js
 
 
-Access http://localhost:3000 and enjoy yourself!
+Access [http://localhost:3000](http://localhost:3000) and enjoy yourself!
+
+
+## BDD Tests
+
+Access the page [http://localhost:3000/specs.html](http://localhost:3000/specs.html) to see all tests.
