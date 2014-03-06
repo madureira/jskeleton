@@ -3,18 +3,18 @@
  *
  * @author Madureira
  */
-App.views.helloWorld = (function($, hbs, undefined) {
+App.views.helloWorld = (function(fn, $, hbs, undefined) {
     'use strict';
 
-    App.views.helloWorld = function() {
+    fn = function() {
         console.log('This is the Hello World constructor');
     }
 
-    App.views.helloWorld.prototype.render = function($container) {
+    fn.prototype.render = function($container) {
         $container.append(this.sayHello());
     }
 
-    App.views.helloWorld.prototype.sayHello = function() {
+    fn.prototype.sayHello = function() {
         return template({ message:'Hello World!!!' });
     }
 
@@ -24,6 +24,6 @@ App.views.helloWorld = (function($, hbs, undefined) {
         return tmpl(data);
     }
 
-    return App.views.helloWorld;
+    return fn;
 
-})(jQuery, Handlebars);
+})(function(){}, jQuery, Handlebars);
