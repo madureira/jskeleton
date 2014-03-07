@@ -11,11 +11,7 @@ App.views.helloWorld = (function(fn, $, hbs, undefined) {
     }
 
     fn.prototype.render = function($container) {
-        $container.append(this.sayHello());
-    }
-
-    fn.prototype.sayHello = function() {
-        return template({ message:'Hello World!!!' });
+        $container.append(template({ message:'Hello World!!!' }));
     }
 
     // Private method

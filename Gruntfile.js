@@ -15,10 +15,9 @@ module.exports = function(grunt) {
 
         concat: {
             'public/bin/app.js': [
-                'src/javascript/lib/jquery.js',
-                'src/javascript/lib/underscore.js',
-                'src/javascript/lib/backbone.js',
-                'src/javascript/lib/handlebars.runtime.js',
+                'src/javascript/vendor/jquery.js',
+                'src/javascript/vendor/handlebars.runtime.js',
+                'src/javascript/vendor/bootstrap.min.js',
                 'src/javascript/bin/templates.js',
 
                 'src/javascript/config/namespace.js',
@@ -67,7 +66,10 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'public/bin/app.css': [
-                        'src/stylesheet/lib/*.css',
+                        'src/stylesheet/vendor/normalize.css',
+                        'src/stylesheet/vendor/bootstrap.min.css',
+                        'src/stylesheet/vendor/bootstrap-theme.min.css',
+                        'src/stylesheet/main/theme.less',
                         'src/stylesheet/main/**/*.less'
                     ],
                     'public/bin/specs.css': [
