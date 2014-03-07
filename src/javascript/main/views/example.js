@@ -1,15 +1,15 @@
 /**
- * Home View
+ * Example View
  *
  * @author Madureira
  */
-App.views.home = (function(fn, $, hbs, undefined) {
+App.views.example = (function(fn, $, hbs, undefined) {
     'use strict';
 
     var _id = '#home';
 
     fn.prototype.render = function($container) {
-        $container.append(homeTemplate());
+        $container.append(exampleTemplate());
         $container.after(forkmeTemplate());
 
         bindEvents();
@@ -21,8 +21,8 @@ App.views.home = (function(fn, $, hbs, undefined) {
         });
     }
 
-    function homeTemplate() {
-        var tmpl = hbs['home.tmpl'];
+    function exampleTemplate() {
+        var tmpl = hbs['example.tmpl'];
         return tmpl();
     }
 

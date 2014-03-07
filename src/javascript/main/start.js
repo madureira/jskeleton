@@ -2,8 +2,8 @@ $(document).ready(function() {
 
     App.container = $('#app');
 
-    var homeView = new App.views.home();
+    var exampleView = new App.views.example();
 
-    homeView.render(App.container);
+    exampleView.render(App.container);
 
 });
