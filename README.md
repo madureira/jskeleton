@@ -6,7 +6,7 @@ This is a simple js skeleton for build complex javascript-based applications.
 
 jskeleton can:
 
-1. Run javscript/coffeescript applications
+1. Run javascript/coffeescript applications
 1. Run BDD tests using jasmine
 1. Build Server in nodejs
 
