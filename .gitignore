@@ -1,3 +1,2 @@
 node_modules/
-public/bin/
-src/javascript/bin/
+build/

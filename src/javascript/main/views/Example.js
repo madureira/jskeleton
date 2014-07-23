@@ -1,9 +1,6 @@
-/**
- * Example View
- *
- * @author Madureira
- */
-App.views.example = (function(fn, $, hbs, undefined) {
+App.package('views');
+
+App.views.Example = (function(fn, $, tmpl, undefined) {
     'use strict';
 
     var _id = '#home';
@@ -17,20 +14,19 @@ App.views.example = (function(fn, $, hbs, undefined) {
 
     function bindEvents() {
         $(_id).find('button').click(function() {
-            alert('teste');
+            var helloView = new App.views.HelloWorld();
+            helloView.render();
         });
     }
 
     function exampleTemplate() {
-        var tmpl = hbs['example.tmpl'];
-        return tmpl();
+        return tmpl['example.example']();
     }
 
     function forkmeTemplate() {
-        var tmpl = hbs['forkme.tmpl'];
-        return tmpl();
+        return tmpl['example.forkme']();
     }
 
     return fn;
 
-})(function(){}, jQuery, Handlebars);
+})(function(){}, jQuery, HBSTemplates);

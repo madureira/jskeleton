@@ -1,8 +1,8 @@
 {
   "name"              : "jskeleton",
-  "version"           : "0.1.0",
+  "version"           : "0.2.0",
   "description"       : "A simple js skeleton for build complex javascript-based applications.",
-  "keywords"          : [ "jskeleton", "javascript", "nodejs", "coffeescript", "less" ],
+  "keywords"          : [ "jskeleton", "javascript", "nodejs", "less" ],
   "homepage"          : "https://github.com/madureira/jskeleton",
 
   "author"            : "Rafael Madureira dos Santos",
@@ -11,21 +11,26 @@
   "repository"        : { "type": "git", "url": "https://github.com/madureira/jskeleton.git" },
   "license"           : "BSD",
 
-  "main"              : "index.html",
-
-  "dependencies"      : {
-      "grunt-contrib-handlebars"  : "~0.6.0",
-      "grunt-contrib-concat"      : "~0.3.0",
-      "grunt-contrib-uglify"      : "~0.2.7",
-      "grunt-contrib-watch"       : "~0.5.3",
-      "grunt-contrib-less"        : "~0.9.0",
-      "express"                   : "~3.4.7"
-  },
+  "main"              : "build/illusion-maker.js",
 
   "devDependencies"   : {
-    "jasmine-node"    : "~1.5.0",
-    "coffee-script"   : "~1.6.2"
+      "gulp"                      : "~3.6.2",
+      "gulp-concat"               : "~2.2.0",
+      "gulp-uglify"               : "~0.3.0",
+      "gulp-minify-css"           : "~0.3.7",
+      "gulp-util"                 : "~2.2.14",
+      "gulp-rename"               : "~1.2.0",
+      "gulp-filesize"             : "~0.0.6",
+      "gulp-jshint"               : "~1.6.1",
+      "jshint-stylish"            : "0.4.0",
+      "gulp-handlebars"           : "~2.1.0",
+      "gulp-define-module"        : "~0.1.1",
+      "gulp-header"               : "~1.0.2",
+      "jasmine-node-karma"        : "~1.6.1",
+      "karma-phantomjs-launcher"  : "0.1.4",
+      "karma-jasmine"             : "0.1.5"
   },
 
-  "engines"         : { "node": ">= 0.10.3" }
+  "engines"         : { "node": ">= 0.10.28" }
+
 }

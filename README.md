@@ -6,9 +6,7 @@ This is a simple js skeleton for build complex javascript-based applications.
 
 jskeleton can:
 
-1. Run javascript/coffeescript applications
-1. Run BDD tests using jasmine
-1. Build Server in nodejs
+1. Run javascript applications
 
 ## How?
 
@@ -39,24 +37,14 @@ You need to download dependencies, go to your project directory, in other words,
 
     $ npm install
 
-You have to install Grunt on global mode (in some cases is necessary to execute it with "sudo"):
+You have to install Gulp on global mode (in some cases is necessary to execute it with "sudo"):
 
-    $ npm install -g grunt-cli
+    $ npm install -g gulp
 
 To generate the compressed files, you must to open a new tab in your terminal, (this tab should be kept open, or if you prefer execute the command in background mode) and execute:
 
-    $ grunt
+    $ gulp
 
-Now, always that you save any modified file, Grunt will execute tasks to generate a compressed file.
+Now, always you save any modified file, Gulp will execute tasks to generate a compressed file.
 
-Finally, start the server:
-
-    $ node server.js
-
-
-Access [http://localhost:3000](http://localhost:3000) and enjoy yourself!
-
-
-## BDD Tests
-
-Access the page [http://localhost:3000/specs.html](http://localhost:3000/specs.html) to see all tests.
+Finally, open public/index.html file in your browser and enjoy yourself!
