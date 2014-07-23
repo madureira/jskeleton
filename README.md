@@ -1,4 +1,4 @@
-# jskeleton [![NPM version][npm-image]][npm-url]
+# jskeleton
 
 This is a simple js skeleton for build complex javascript-based applications.
 
@@ -10,9 +10,7 @@ jskeleton can:
 
 ## How?
 
-First of all, download and install nodejs:
-
-    [http://nodejs.org/download/](http://nodejs.org/download/)
+First of all, download and install nodejs: [http://nodejs.org/download/](http://nodejs.org/download/)
 
 ```sh
 $ tar -zxvf node-v0.10.3-xxxxx.tar.gz
@@ -21,7 +19,7 @@ $ tar -zxvf node-v0.10.3-xxxxx.tar.gz
 Then copy it to your environment's directory (the environment directory is a place where you generally keeps development tools):
 
 ```sh
-    $ cp node-v0.10.3-xxxxx /home/user/environment/nodejs -R
+$ cp node-v0.10.3-xxxxx /home/user/environment/nodejs -R
 ```
 
 Now, you have to create the environment variables, edit the file /home/user/.profile or /home/user/.bashrc and add it:
@@ -36,7 +34,7 @@ Save, close file and then execute:
 ```sh
 $ source /home/user/.profile
 ```
-    or
+or
 ```sh
 $ source /home/user/.bashrc
 ```
