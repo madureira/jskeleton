@@ -6,7 +6,7 @@
  * @tmpl template engine
  *
  */
-App.define('HelloWorld', 'views', (function(fn, $, tmpl, undefined) {
+App.define('HelloWorld', 'views/example', (function(fn, $, tmpl, undefined) {
     'use strict';
 
     var _id = "#message";
@@ -14,7 +14,11 @@ App.define('HelloWorld', 'views', (function(fn, $, tmpl, undefined) {
     fn.prototype.render = function($container) {
         console.log('Rendering Hello World View');
 
-        $(_id).html(template({ message:'Hello World!!!' }));
+        var model = new App.models.example.Example();
+
+        var msg = model.getMessage();
+
+        $(_id).html(template({ message: msg }));
     };
 
     // Private method

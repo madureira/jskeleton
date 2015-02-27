@@ -6,7 +6,7 @@
  * @param template engine
  *
  */
-App.define('Example', 'views', (function(fn, $, tmpl, undefined) {
+App.define('Example', 'views/example', (function(fn, $, tmpl, undefined) {
     'use strict';
 
     var _id = '#home';
@@ -20,7 +20,7 @@ App.define('Example', 'views', (function(fn, $, tmpl, undefined) {
 
     function bindEvents() {
         $(_id).find('button').click(function() {
-            var helloView = new App.views.HelloWorld();
+            var helloView = new App.views.example.HelloWorld();
             helloView.render();
         });
     }
