@@ -1,24 +1,19 @@
-// Defines the namespace container
-var App = App || {};
-
 /**
  * This function is responsible to generate the namespace dynamically.
  *
  * @author Madureira
  *
- * @param string namespace]
+ * @param string namespace
  *
  * @return void
  */
-App.package = App.package || function(namespace) {
+App.define = App.define || function(clazz, namespace, object) {
 
     /**
      * Generates an object based on array.
      * # Example
-     *     Given: array([0] => 'a', [1] => 'b')
-     *     Return: Object({ a: { b: {} } });
-     *
-     * @author Madureira
+     *   Given: array([0] => 'a', [1] => 'b')
+     *   Return: Object({ a: { b: {} } });
      *
      * @param array list
      *
@@ -26,12 +21,29 @@ App.package = App.package || function(namespace) {
      */
     function generatesObjectByArray(list) {
         var namespaceTree = {};
+        var rootPackage = list[0];
 
         list.reverse();
 
         for (var i=0; list.length > i; i++) {
             var tmp = {};
-            tmp[list[i]] = namespaceTree;
+
+            if (i === 0) {
+                var implementation = {};
+
+                switch(rootPackage) {
+                    case 'views':
+                        implementation = object(function(){}, App.Properties.selectorEngine, App.Properties.templateEngine);
+                        break;
+                    default:
+                        implementation = object(function(){});
+                }
+
+                tmp[list[i]] = implementation;
+            } else {
+                tmp[list[i]] = namespaceTree;
+            }
+
             namespaceTree = tmp;
         }
 
@@ -50,8 +62,9 @@ App.package = App.package || function(namespace) {
         return App.Helpful.mergeObjects(namespace, context);
     }
 
+    var namespaceList = namespace.split('/');
+    namespaceList.push(clazz);
 
-    var namespaceList = namespace.split('.');
     var newNamespaceObject = generatesObjectByArray(namespaceList);
 
     App = createNamespace(newNamespaceObject, App);

@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
 var gutil = require('gulp-util');
 var rename = require('gulp-rename');
@@ -10,13 +11,14 @@ var stylish = require('jshint-stylish');
 var handlebars = require('gulp-handlebars');
 var defineModule = require('gulp-define-module');
 var header = require('gulp-header');
+var clean = require('gulp-clean');
 
 
 // Package for js sources
 var jsPackage = [
-    './src/javascript/main/package/Manager.js',
-    './src/javascript/main/config/Properties.js',
-    './src/javascript/main/utils/Helpful.js',
+    './src/javascript/main/core/config/Properties.js',
+    './src/javascript/main/core/utils/Helpful.js',
+    './src/javascript/main/core/package/Manager.js',
     './src/javascript/main/models/**/*.js',
     './src/javascript/main/views/**/*.js',
     './src/javascript/main/start.js'
@@ -47,7 +49,7 @@ var cssVendorsPackage = [
 
 // Package for templates
 var templatesPackage = [
-    './src/javascript/main/templates/**/*.hbs'
+    './src/javascript/main/templates/**/*.tmpl'
 ];
 
 
@@ -108,7 +110,7 @@ gulp.task('buildTemplates', function() {
     gulp.src(templatesPackage)
         .pipe(handlebars())
         .pipe(defineModule('plain', {
-            wrapper: 'HBSTemplates["<%= templateName %>"] = <%= handlebars %>',
+            wrapper: 'App.template["<%= templateName %>"] = <%= handlebars %>',
             context: function(context) {
                 var file = context.file;
                 var fullPath = file.path;
@@ -121,9 +123,9 @@ gulp.task('buildTemplates', function() {
 
                 return { templateName: name };
             }
-        }))
-        .pipe(concat('app.templates.js'))
-        .pipe(header('var HBSTemplates = HBSTemplates || {};'))
+        })).pipe(concat('app.templates.min.js'))
+        .pipe(header('var App = App || {}; App.template = App.template || {};'))
+        .pipe(uglify())
         .pipe(gulp.dest('./build'))
         .pipe(filesize())
         .on('error', gutil.log);

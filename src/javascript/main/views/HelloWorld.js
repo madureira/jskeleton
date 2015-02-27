@@ -1,6 +1,12 @@
-App.package('views');
-
-App.views.HelloWorld = (function(fn, $, tmpl, undefined) {
+/**
+ * Prototype responsible to render the hello world screen.
+ *
+ * @param fn context function
+ * @param $ selector engine
+ * @tmpl template engine
+ *
+ */
+App.define('HelloWorld', 'views', (function(fn, $, tmpl, undefined) {
     'use strict';
 
     var _id = "#message";
@@ -18,4 +24,4 @@ App.views.HelloWorld = (function(fn, $, tmpl, undefined) {
 
     return fn;
 
-})(function(){}, jQuery, HBSTemplates);
+}));

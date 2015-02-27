@@ -1,6 +1,12 @@
-App.package('views');
-
-App.views.Example = (function(fn, $, tmpl, undefined) {
+/**
+ * Prototype responsible to render the Exemple screen.
+ *
+ * @param fn context function
+ * @param $ selector engine
+ * @param template engine
+ *
+ */
+App.define('Example', 'views', (function(fn, $, tmpl, undefined) {
     'use strict';
 
     var _id = '#home';
@@ -29,4 +35,4 @@ App.views.Example = (function(fn, $, tmpl, undefined) {
 
     return fn;
 
-})(function(){}, jQuery, HBSTemplates);
+}));
