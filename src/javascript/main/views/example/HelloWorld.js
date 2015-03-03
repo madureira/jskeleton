@@ -9,8 +9,16 @@
 App.define('HelloWorld', 'views/example', (function(fn, $, tmpl, undefined) {
     'use strict';
 
-    var _id = "#message";
+    var VIEW_ID = "#message";
 
+    /**
+     * This method render the hello world view.
+     *
+     * @param $container selector
+     *
+     * @return void
+     *
+     */
     fn.prototype.render = function($container) {
         console.log('Rendering Hello World View');
 
@@ -18,11 +26,11 @@ App.define('HelloWorld', 'views/example', (function(fn, $, tmpl, undefined) {
 
         var msg = model.getMessage();
 
-        $(_id).html(template({ message: msg }));
+        $(VIEW_ID).html(_template({ message: msg }));
     };
 
     // Private method
-    function template(data) {
+    function _template(data) {
         return tmpl['example.helloworld'](data);
     }
 

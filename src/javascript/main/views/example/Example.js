@@ -9,27 +9,35 @@
 App.define('Example', 'views/example', (function(fn, $, tmpl, undefined) {
     'use strict';
 
-    var _id = '#home';
+    var HOME_ID = '#home';
 
+    /**
+     * This method render the example screen.
+     *
+     * @param $container selector
+     *
+     * @retunr void
+     *
+     */
     fn.prototype.render = function($container) {
-        $container.append(exampleTemplate());
-        $container.after(forkmeTemplate());
+        $container.append(_exampleTemplate());
+        $container.after(_forkmeTemplate());
 
-        bindEvents();
+        _bindEvents();
     };
 
-    function bindEvents() {
-        $(_id).find('button').click(function() {
+    function _bindEvents() {
+        $(HOME_ID).find('button').click(function() {
             var helloView = new App.views.example.HelloWorld();
             helloView.render();
         });
     }
 
-    function exampleTemplate() {
+    function _exampleTemplate() {
         return tmpl['example.example']();
     }
 
-    function forkmeTemplate() {
+    function _forkmeTemplate() {
         return tmpl['example.forkme']();
     }
 

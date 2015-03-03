@@ -13,9 +13,14 @@
 
   "main"              : "build/illusion-maker.js",
 
+  "scripts": {
+    "pretest"   : "./node_modules/.bin/gulp prepare",
+    "test"      : "./node_modules/karma/bin/karma start ./src/javascript/test/karma.conf.js"
+  },
+
   "devDependencies"   : {
-      "gulp"                      : "~3.6.2",
-      "gulp-concat"               : "~2.2.0",
+      "gulp"                      : "~3.8.10",
+      "gulp-concat"               : "~2.5.0",
       "gulp-uglify"               : "~0.3.0",
       "gulp-less"                 : "~3.0.0",
       "gulp-minify-css"           : "~0.3.7",

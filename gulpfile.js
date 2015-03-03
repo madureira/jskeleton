@@ -131,7 +131,14 @@ gulp.task('buildTemplates', function() {
         .on('error', gutil.log);
 });
 
-
+// Prepare to tests
+gulp.task('prepare', [
+        'buildTemplates',
+        'buildJsVendors',
+        'buildJs',
+        'buildCssVendors',
+        'buildCss'
+]);
 
 
 // Watch the modifications and re-build.
